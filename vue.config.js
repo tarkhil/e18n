@@ -1,5 +1,12 @@
 module.exports = {
-  pluginOptions: {
+    configureWebpack: {
+	devServer: {
+	    watchOptions: {
+		ignored: ["/node_modules/", "/public/", "**/.#*"]
+	    }
+	}
+    },
+    pluginOptions: {
     i18n: {
       locale: 'en',
       fallbackLocale: 'en',
